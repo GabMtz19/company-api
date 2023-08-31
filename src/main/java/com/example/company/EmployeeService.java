@@ -12,4 +12,8 @@ public class EmployeeService {
     public List<Employee> allPersonnel() {
         return employeeRepository.findAll();
     }
+
+    public String getMessage() {
+        return "Hello!";
+    }
 }

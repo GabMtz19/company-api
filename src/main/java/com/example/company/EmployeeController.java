@@ -17,4 +17,10 @@ public class EmployeeController {
     public ResponseEntity<List<Employee>> getAllPersonnel() {
         return new ResponseEntity<List<Employee>>(employeeService.allPersonnel(), HttpStatus.OK);
     }
+
+    @CrossOrigin(origins = "http://localhost:4200/")
+    @GetMapping("/message")
+    public ResponseEntity<String> getMessage() {
+        return new ResponseEntity<String>(employeeService.getMessage(), HttpStatus.OK);
+    }
 }
